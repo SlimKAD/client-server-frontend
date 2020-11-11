@@ -5,12 +5,12 @@
   color: #3b0062;
 }
 
-.single-post h2 {
-  font-size: 1rem;
-  color: #464646;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid #464646;
+.unit {
+  border:1px solid  #3b0062 ;
+  padding: 0.5rem;
+  margin: 1rem 0;
 }
+
 
 .single-post__image {
   height: 20rem;
@@ -20,6 +20,6 @@
 
 @media (min-width: 768px) {
   .single-post {
-    width: 40rem;
+    width: 50rem;
   }
 }

@@ -107,12 +107,12 @@ class App extends Component {
   };
 
   signupHandler = (event, authData) => {
+    console.log(authData.signupForm.uid)
     
     event.preventDefault();
     const listUiD = ["514","458","3431"];
-    const isUidValid = listUiD.indexOf(value => value === authData.signupForm.uid )
-    console.log(isUidValid, "isUidValid")
-    if(isUidValid > 0 ) {
+    const isUidValid = listUiD.find(value => value == authData.signupForm.uid.value )
+    if(!isUidValid) {
       this.setState({
         isAuth: false,
         authLoading: false,
@@ -120,7 +120,7 @@ class App extends Component {
           message: "Validation failed. Make sure that u have a valid UID !"
         } 
       });
-      return null
+    return null
     }
     this.setState({ authLoading: true });
     

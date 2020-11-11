@@ -9,14 +9,11 @@ import Loader from '../../components/Loader/Loader';
 import ErrorHandler from '../../components/ErrorHandler/ErrorHandler';
 import './Interview.css';
 
-class Interview extends Component {
+class Unit extends Component {
   state = {
     isEditing: false,
-    posts: [],
-    totalPosts: 0,
+    units: [],
     editPost: null,
-    status: '',
-    postPage: 1,
     postsLoading: true,
     editLoading: false
   };
@@ -295,4 +292,4 @@ class Interview extends Component {
   }
 }
 
-export default Interview;
+export default Unit;
