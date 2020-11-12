@@ -111,7 +111,7 @@ class SinglePost extends Component {
           isEditing: false,
           editPost: null,
           editLoading: false,
-          error: err
+          error:{message: "You are not authorized to delete this Interview" }
         });
       });
   };
@@ -139,7 +139,7 @@ class SinglePost extends Component {
       })
       .catch(err => {
         console.log(err);
-        this.setState({ unitsLoading: false });
+        this.setState({ unitsLoading: false, error:{message: "You are not authorized to delete this unit" } });
       });
   };
 

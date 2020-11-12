@@ -18,7 +18,8 @@ class Interview extends Component {
     status: '',
     postPage: 1,
     postsLoading: true,
-    editLoading: false
+    editLoading: false,
+    error: ''
   };
 
   componentDidMount() {
@@ -184,7 +185,7 @@ class Interview extends Component {
           isEditing: false,
           editPost: null,
           editLoading: false,
-          error: err
+          error:{message: "You are not authorized to edit  this Interview" }
         });
       });
   };
@@ -216,7 +217,7 @@ class Interview extends Component {
       })
       .catch(err => {
         console.log(err);
-        this.setState({ postsLoading: false });
+        this.setState({ postsLoading: false, error:{message: "You are not authorized to delete this Interview" } });
       });
   };
 
