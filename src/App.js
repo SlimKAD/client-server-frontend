@@ -9,6 +9,7 @@ import MobileNavigation from './components/Navigation/MobileNavigation/MobileNav
 import ErrorHandler from './components/ErrorHandler/ErrorHandler';
 import InterviewPage from './pages/Interview/Interview';
 import SinglePostPage from './pages/Interview/SinglePost/SinglePost';
+import Users from './pages/Users/Users';
 import LoginPage from './pages/Auth/Login';
 import SignupPage from './pages/Auth/Signup';
 import './App.css';
@@ -211,6 +212,17 @@ class App extends Component {
               <InterviewPage userId={this.state.userId} token={this.state.token} />
             )}
           />
+            <Route
+            path="/users"
+            exact
+            render={props => (
+              <Users
+                {...props}
+                userId={this.state.userId}
+                token={this.state.token}
+              />
+            )}
+          />
           <Route
             path="/:postId"
             render={props => (
@@ -221,6 +233,7 @@ class App extends Component {
               />
             )}
           />
+         
           <Redirect to="/" />
         </Switch>
       );

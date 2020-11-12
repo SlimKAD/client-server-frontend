@@ -194,7 +194,7 @@ class SinglePost extends Component {
         {this.state.units.map((unit, key) => (
           <div className="unit" key={key}>  
         <ListItem threeLine >
-        <ListItemContent avatar="person" subtitle={unit.content}>Created by {unit.creator.name} on {new Date(unit.createdAt).toLocaleDateString('en-US')}</ListItemContent>
+        <ListItemContent avatar="comment" subtitle={unit.content}>Created by {unit.creator.name} on {new Date(unit.createdAt).toLocaleDateString('en-US')}</ListItemContent>
        <ListItemAction>
         <Icon name="edit" onClick={() => this.startEditUnitHandler(unit._id)} theme="outlined"  style={{ fontSize: "20px", color: "green" }}/>
         <Icon name="delete" onClick={() => this.deleteUnitHandler(unit._id)} theme="outlined" style={{ fontSize: "20px", color: "#CC160B" }}/>

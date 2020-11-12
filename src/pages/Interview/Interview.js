@@ -240,7 +240,8 @@ class Interview extends Component {
           onFinishEdit={this.finishEditHandler}
         />
         <section className="feed__status">
-          <form onSubmit={this.statusUpdateHandler}>
+        <h4>Gentle reminder !</h4>
+          <form onSubmit={this.statusUpdateHandler}>    
             <Input
               type="text"
               placeholder="Your status"
@@ -248,7 +249,7 @@ class Interview extends Component {
               onChange={this.statusInputChangeHandler}
               value={this.state.status}
             />
-            <Button mode="flat" type="submit">
+            <Button mode="raised" type="submit">
               Update
             </Button>
           </form>
