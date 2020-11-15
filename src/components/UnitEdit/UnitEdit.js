@@ -111,7 +111,7 @@ class UnitEdit extends Component {
           <form>
             <Input
               id="content"
-              label="Content"
+              label="Content*"
               control="textarea"
               rows="5"
               onChange={this.unitInputChangeHandler}

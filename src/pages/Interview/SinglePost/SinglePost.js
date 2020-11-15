@@ -95,8 +95,9 @@ class SinglePost extends Component {
               u => u._id === prevState.editUnit._id
             );
             updatedUnits[unitIndex] = unit;
-          }
-          updatedUnits = prevState.units.concat(unit);
+          } else if(prevState.units.length < 2) {
+            updatedUnits = prevState.units.concat(unit);
+          }    
           return {
             units: updatedUnits.reverse(),
             isEditing: false,
@@ -146,6 +147,7 @@ class SinglePost extends Component {
   startEditUnitHandler = (unitId) => {
     this.setState(prevState => {
       const loadedUnits = { ...prevState.units.find(u => u._id === unitId) };
+      
 
       return {
         isEditing: true,
